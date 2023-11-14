@@ -49,23 +49,27 @@ df will be a static, or batch dataframe.
 This df "static_df" will not be updated if further changes occur to the source table.
 
 
-```static_df = spark.read.format("delta") \
+```
+static_df = spark.read.format("delta") \
   .option("readChangeFeed", "true") \
   .option("startingVersion", 1) \
   .option("endingVersion", 5) \
   .table("table_name")
-display(static_df)```
+display(static_df)
+```
 
 ## Streaming read
 The following statement displays a streaming dataframe "streaming_df" representing all table changes that have occured to table "table_name" since version 3.
 
 The dataframe streaming_df will be a streaming dataframe. The dataframe when displayed will update when new versions of the table "table_name" are created by append, delete or update operations. 
 
-```streaming_df = spark.readStream.format("delta") \
+```
+streaming_df = spark.readStream.format("delta") \
   .option("readChangeFeed", "true") \
   .option("startingVersion", 3) \
   .table("table_name")
-display(streaming_df)```
+display(streaming_df)
+```
 
 # Applying Changes from the Change Data Feed to a destination
 
