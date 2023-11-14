@@ -44,7 +44,11 @@ For all tables created in current session.
 
 ## Static or Batch read
 The following statement displays a dataframe "static_df" representing all table changes occuring in version 1-5
-df will be a static, or batch dataframe. The df will not be updated if further changes occur to the source table.
+df will be a static, or batch dataframe.
+
+This df "static_df" will not be updated if further changes occur to the source table.
+
+
 static_df = spark.read.format("delta") \
   .option("readChangeFeed", "true") \
   .option("startingVersion", 1) \
