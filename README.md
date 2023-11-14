@@ -7,7 +7,7 @@ The Change Data Feed is a record of changes made to a Delta Lake.
 
 # What purpose is served by the Change Data Feed?
 
-The Change Data Feed can be used to solve the issue that propagating appends is straightforward, while propagating deletes or updates is a challenge. 
+The Change Data Feed can be used to solve the issue that propagating appends from a delta lake source to a delta lake destination is straightforward, while propagating deletes or updates is a challenge. 
 
 Enabling the Change Data Feed creates a log of changes made to the source, that can be used to propagate updates or deletes to the destination. 
 
