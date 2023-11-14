@@ -15,11 +15,21 @@ Enabling the Change Data Feed creates a log of changes made to the source, that 
 
 The Change Data Feed will contain the following. 
 
-Commit Version = What Version of the Delta Lake do the changes apply to. 
+Commit Version = What Version of the Delta Lake do the changes apply to.
+
+
 update_preimage = Full record of the row before the update
+
+
 update_postimage = Full record of the row after the update
+
+
 Insert = Full record of the row to be inserted
+
+
 delete = Full record of the row to be deleted
+
+
 commit_timestamp = timestamp for the operation
 
 # Enabling the Change Data Feed
