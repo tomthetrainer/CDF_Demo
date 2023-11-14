@@ -35,10 +35,10 @@ commit_timestamp = timestamp for the operation
 # Enabling the Change Data Feed
 
 For existing tables, 
-ALTER TABLE myDeltaTable SET TBLPROPERTIES (delta.enableChangeDataFeed = true)
+```ALTER TABLE myDeltaTable SET TBLPROPERTIES (delta.enableChangeDataFeed = true)```
 
 For all tables created in current session.
-set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;
+```set spark.databricks.delta.properties.defaults.enableChangeDataFeed = true;```
 
 # Reading the Change Data Feed
 
